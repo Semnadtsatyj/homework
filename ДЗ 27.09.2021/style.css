@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f679;
+    padding: 5px;
+}
+
+header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 80px;
+    text-align: center;
+    font: 500 3em arial;
+    line-height: 1.5;
+}
+
+figure {
+    float: left;
+    width: 430px;
+    height: 592px;
+    border-bottom-left-radius: 1em;
+    background-image: url("image/iam.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: #800f00 2px solid;
+    margin-top: 5px;
+
+}
+figcaption {
+    font: oblique 500 1em arial;
+    padding: 5px 0 0 5px;
+}
+
+main {
+    float: right;
+    margin-top: 5px;
+    width: 65%;
+    height: 583px;
+}
+p {
+    text-align: justify;
+    text-indent: 30px;
+    font: oblique 600 1em arial;
+    padding: 5px;
+}
+
+.name {
+    margin-bottom: 5px;
+    width: 99.5%;
+    height: 83px;
+    font: oblique 500 3em arial;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.about_me {
+    float: left;
+    width: 49%;
+    height: available;
+    margin-right: 5px;
+}
+
+.about_lessons{
+    width: 49.4%;
+    height: 500px;
+    float: left;
+    border-bottom-right-radius: 1em;
+}
+img {
+    width: 390px;
+    margin-left: 8px;
+    margin-top: 95px;
+
+}
+header, section {
+    background-color: burlywood;
+    border: #800f00 2px solid;
+}
