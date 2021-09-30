@@ -1,0 +1,13 @@
+span {
+display:block;
+position: absolute;
+top: 16px;
+}
+
+td {
+position: relative;
+}
+
+.ham {
+float: right;
+}

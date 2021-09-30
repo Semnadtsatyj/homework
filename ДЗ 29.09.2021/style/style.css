@@ -22,7 +22,7 @@ figure {
     width: 430px;
     height: 592px;
     border-bottom-left-radius: 1em;
-    background-image: url("image/iam.jpg");
+    background-image: url("../image/iam.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border: #800f00 2px solid;
@@ -72,14 +72,19 @@ p {
     border-bottom-right-radius: 1em;
 }
 
-img {
+.logo {
     width: 390px;
     margin-left: 8px;
     margin-top: 95px;
 
 }
 
+.dmitry {
+    float: left;
+    margin: 3px 0 0 4px;
+}
+
 header, section {
-    background-color: burlywood;
+    background-color: #f0e8d0;
     border: #800f00 2px solid;
 }
