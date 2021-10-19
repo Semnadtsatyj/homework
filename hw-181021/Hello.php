@@ -1,5 +1,6 @@
 <?php
-date_default_timezone_set("Asia/Yekaterinburg");
+session_start();
+/*date_default_timezone_set("Asia/Yekaterinburg");
 //date_default_timezone_set("America/Los_Angeles");
 $val = date(G);
 function timeStyle($dat)
@@ -11,7 +12,7 @@ function timeStyle($dat)
     }
     return $now;
 }
-$now = timeStyle($val);
+$style = timeStyle($val);*/
 //сообщение
 $form = <<<FORM
  <form action="" method="post">
@@ -45,13 +46,14 @@ function message($message, $form) {
     <link rel="stylesheet" href="style/styleReg.css">
     <title>Добро пожаловать</title>
 </head>
-<body class="<?php echo $now[0]; ?>">
+<body>
 <?php include("header.php"); ?>
 <section class="container">
+
     <section class="registr <?echo $now[2]?>">
         <p class="formFild"><?message($message, $form);?></p>
     </section>
-</section>
+    </section>
 </body>
 </html>
 

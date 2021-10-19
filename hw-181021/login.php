@@ -1,6 +1,7 @@
 <?php
+session_start();
 ob_start();
-date_default_timezone_set("Asia/Yekaterinburg");
+/*date_default_timezone_set("Asia/Yekaterinburg");
 //date_default_timezone_set("America/Los_Angeles");
 $val = date(G);
 function timeStyle($dat)
@@ -12,7 +13,7 @@ function timeStyle($dat)
     }
     return $now;
 }
-$now = timeStyle($val);
+$style = timeStyle($val);*/
 
 //Авторизация
 $login_true = "d9ffaca46d5990ec39501bcdf22ee7a1"; //Том
@@ -30,8 +31,10 @@ function enterSite($login, $password, $login_true, $password_true) {
         else if ($password == ''){
             return "Введите \"пароль\"";
         } else {
+            //$login = $_SESSION["name"] ?? null;
             }
             if (md5($login) === $login_true && md5($password) === $password_true) {
+                $_SESSION['login'] = $login;
                 header("Location: $hello");
                 ob_end_flush();
             } else {
@@ -53,9 +56,9 @@ function enterSite($login, $password, $login_true, $password_true) {
     <link rel="stylesheet" href="style/styleReg.css">
     <title>Авторизация</title>
 </head>
-<body class="<?php echo $now[0]; ?>">
+<body class="d1">
 <section class="container">
-    <section class="registr <? echo $now[2]; ?>">
+    <section class="registr d3">
         <form action="" method="post" class="windowReg">
             <p class="message"><? echo enterSite($login, $password, $login_true, $password_true)?></p>
             <p class="formFild">
