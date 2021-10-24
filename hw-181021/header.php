@@ -12,12 +12,6 @@ switch (isset($_POST)) {
         $now = array('n1', 'n2', 'n3', 'n4');
         break;
 }
-/*$_SESSION['fact'] = $_POST['fact'];
-if (isset ($GET['fact'])){
-    var_dump($_GET['fact']);
-}
-$_SESSION['bitrix'] = $_POST['bitrix'];
-var_dump($_SESSION['bitrix']);*/
 
 if (isset($_SESSION['login'])) {
     echo "hello" . $_SESSION['login'];
@@ -31,7 +25,15 @@ if (isset($_SESSION['login'])) {
         echo '<meta http-equiv="refresh" content="2; url="></head>';
     }
 }
+$fact = "https://school.fact.digital/";
+$bitrix = "https://www.1c-bitrix.ru/";
 
+$_SESSION['fact'] = $_POST['$fact'];
+if (isset ($GET['fact'])){
+    var_dump($_GET['fact']);
+}
+$_SESSION['bitrix'] = $_POST['$bitrix'];
+var_dump($_SESSION['bitrix']);
 //print_r($_COOKIE);
 
 /*switch (!empty($_GET)) {
@@ -68,10 +70,8 @@ else {
             <li class="menu_element <? echo $now[1] ?>"><a href="login.php">Регистрация</a></li>
             <li class="menu_element <? echo $now[1] ?> parent">Выберите ресурс
                 <ul class="dropdown">
-                    <li class="drop_element1 <? echo $now[1] ?>"><a href="https://school.fact.digital/" id="fact"
-                        >Школа-Факт</a></li>
-                    <li class="drop_element <? echo $now[1] ?>"><a href="https://www.1c-bitrix.ru/"
-                                                                   id="bitrix">Bitrix</a></li>
+                    <li class="drop_element1 <? echo $now[1] ?>"><a href="<?echo $fact?>">Школа-Факт</a></li>
+                    <li class="drop_element <? echo $now[1] ?>"><a href="<?echo $bitrix?>">Bitrix</a></li>
                 </ul>
             </li>
             <li class="menu_element <? echo $now[1] ?> parent">Задачи PHP
